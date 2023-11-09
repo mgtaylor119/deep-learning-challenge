@@ -9,36 +9,33 @@ The purpose of this analysis was to develop a deep learning model for Alphabet S
 ### Data Preprocessing
 
 - **Target Variable**:
-  - The target variable for our model is `[insert target variable name]`.
+  - The target variable for our model is `IS_SUCCESFUL`.
 
 - **Features**:
   - The features used for the model include:
-    - [List of feature variables]
+    - NAME, APPLICATION_TYPE, AFFILIATION, CLASSIFICATION, USE_CASE, ORGANIZATION, STATUS, INCOME_AMT, SPECIAL_CONSIDERATIONS, and ASK_AMT
 
 - **Excluded Variables**:
   - The following variables were removed from the input data as they were neither targets nor features:
-    - [List of excluded variables]
+    - EIN Column
 
 ### Compiling, Training, and Evaluating the Model
 
 - **Model Architecture**:
   - We selected a neural network model with the following specifications:
-    - Number of Layers: [Number of layers]
-    - Number of Neurons per Layer: [Number of neurons per layer]
-    - Activation Functions: [List of activation functions]
-
-- **Rationale**:
-  - [Explain why you chose this architecture and activation functions. For example, why did you choose the number of neurons, layers, and activation functions?]
+    - Number of Layers: 2
+    - Number of Neurons per Layer: 7 and 10
+    - Activation Functions: relu and sigmoid on the Output Layer
 
 - **Model Performance**:
-  - [Include any relevant metrics, such as accuracy, loss, etc.]
-  - We [were/were not] able to achieve the target model performance of [specify target metric].
+  - Loss: 0.5642023086547852, Accuracy: 0.7946355938911438
+  - I was able to achieve the target model performance of >75%.
 
 - **Steps Taken to Improve Performance**:
-  - [List any steps you took to improve model performance. For example, did you try different architectures, activation functions, or hyperparameters?]
+  - Original instructions had us remove EIN and NAME columns, in the Optimized code I only removed EIN
+  - I added a batch_number into the model to aid in the speed of running the 100 epochs, since adding Name back in gratly increased the number of records/features
+  - I dropped the layer neurons to 7 and 10
 
 ## Summary
 
-In summary, the deep learning model performed [describe performance]. However, there may be potential for further improvement. 
-
-A different model, such as [mention a different type of model like a Random Forest or Support Vector Machine], could also be considered for this classification problem. This alternative model may provide a different perspective and potentially yield better results.
+In summary, the deep learning model performed successfully once adding in more features. I attempted several different versions without adding 'NAME' back in, but could not get to above 75%.
