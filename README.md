@@ -13,11 +13,11 @@ The purpose of this analysis was to develop a deep learning model for Alphabet S
 
 - **Features**:
   - The features used for the model include:
-    - NAME, APPLICATION_TYPE, AFFILIATION, CLASSIFICATION, USE_CASE, ORGANIZATION, STATUS, INCOME_AMT, SPECIAL_CONSIDERATIONS, and ASK_AMT
+    - 'NAME', 'APPLICATION_TYPE', 'AFFILIATION', 'CLASSIFICATION', 'USE_CASE', 'ORGANIZATION', 'STATUS', 'INCOME_AMT', 'SPECIAL_CONSIDERATIONS', and 'ASK_AMT'
 
 - **Excluded Variables**:
   - The following variables were removed from the input data as they were neither targets nor features:
-    - EIN Column
+    - 'EIN' Column
 
 ### Compiling, Training, and Evaluating the Model
 
@@ -32,7 +32,7 @@ The purpose of this analysis was to develop a deep learning model for Alphabet S
   - I was able to achieve the target model performance of >75%.
 
 - **Steps Taken to Improve Performance**:
-  - Original instructions had us remove EIN and NAME columns, in the Optimized code I only removed EIN
+  - Original instructions had us remove 'EIN' and 'NAME' columns, in the Optimized code I only removed 'EIN'
   - I added a batch_number into the model to aid in the speed of running the 100 epochs, since adding Name back in gratly increased the number of records/features
   - I dropped the layer neurons to 7 and 10
 
