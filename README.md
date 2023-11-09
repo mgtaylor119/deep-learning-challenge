@@ -9,7 +9,7 @@ The purpose of this analysis was to develop a deep learning model for Alphabet S
 ### Data Preprocessing
 
 - **Target Variable**:
-  - The target variable for our model is `IS_SUCCESFUL`.
+  - The target variable for our model is `IS_SUCCESSFUL`.
 
 - **Features**:
   - The features used for the model include:
